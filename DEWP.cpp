@@ -23,7 +23,7 @@ void DEWP(){
 	
 	cout<<"Enter the temperature[Celsius]\n"; cin>>T;
 	for(int i=0; i<n; i++){
-		cout<<"Enter the molar fraction of compound "<<(i+1)<<endl;
+		cout<<"Enter the molar fraction of compound (vapor phase) "<<(i+1)<<endl;
 		cin>>Y[i];
 	}
 	cout<<"Antoine Equation is given below\n";
@@ -42,6 +42,7 @@ void DEWP(){
 		X[i] = Y[i]*P/Psat(T,A[i],B[i],C[i]);
 	}
 	cout<<"P[mmHg]"<<P<<endl;
+	cout<<"Liquid Phase:\n";	
 	for(int i=0; i<n; i++){
 		cout<<"X["<<(i+1)<<"]="<<X[i]<<endl;
 	}
