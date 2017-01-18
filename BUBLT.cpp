@@ -23,7 +23,7 @@ void BUBLT(){
 	
 	cout<<"Enter the pressure[mmHg]\n"; cin>>P;
 	for(int i=0; i<n; i++){
-		cout<<"Enter the molar fraction of compound "<<(i+1)<<endl;
+		cout<<"Enter the molar fraction of compound (liquid phase) "<<(i+1)<<endl;
 		cin>>X[i];
 	}
 	cout<<"Antoine Equation is given below\n";
@@ -57,6 +57,7 @@ void BUBLT(){
 		Y[i] = X[i]*Psat(T,A[i],B[i],C[i])/P;
 	}
 	cout<<"T[Celsius]="<<T<<endl;
+	cout<<"Vapor Phase:\n";
 	for(int i=0; i<n; i++){
 		cout<<"Y["<<(i+1)<<"]="<<Y[i]<<endl;
 	}		
